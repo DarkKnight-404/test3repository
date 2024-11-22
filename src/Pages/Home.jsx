@@ -7,7 +7,7 @@ export default function () {
     return <>
         {/* <header className="header"> */}
 
-        <img style={{width: "100%", position: "relative", top: "-100px"}} src="image.png" alt="" srcset="" />
+        <img style={{width: "100%", position: "relative", top: "-100px"}} src="https://www.shutterstock.com/image-photo/human-resources-crm-recruitment-business-260nw-703560184.jpg" alt="" srcset="" />
 
         <div style={{marginTop: "100px"}}>
             

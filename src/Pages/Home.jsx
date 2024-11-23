@@ -10,6 +10,7 @@ export default function () {
         <img style={{width: "100%",  marginTop: "60px"}} src="https://darkknight-404.github.io/app-react/image.png" alt="" srcset="" />
 
         <div style={{marginTop: "100px"}}>
+            <h1>Hello World</h1>
             
             
         </div>

@@ -22,26 +22,29 @@ export default function () {
                     <form className="form-container-form">
                         <input className="form-container-input" type="text" id="username" name="username" placeholder="Username" required />
                         <input className="form-container-input" type="password" id="password" name="password" placeholder="Password" required />
-                        <label id="errLable" style={{fontFamily: "-moz-initial", WebkitTextFillColor: "red", textAlign: "center"}}></label>
+                        <label id="errLable" style={{ fontFamily: "-moz-initial", WebkitTextFillColor: "red", textAlign: "center" }}></label>
                         <button className="form-container-button" type="submit" onClick={async (event) => {
                             event.preventDefault();
                             const username = document.getElementById("username").value;
                             const password = document.getElementById("password").value;
 
-                            axios.post("http://localhost:9000/verifyuser",{
+                            axios.post("http://localhost:9000/verifyuser", {
                                 username,
                                 password
-                            }).then((val)=>{
-                                if(!val.data.success){
+                            }).then((val) => {
+                                if (!val.data.success) {
                                     document.getElementById("errLable").innerText = "Wrong Credentials"
                                 }
-                                else{
+                                else {
                                     setUserData(val.data.userData);
+                                    setUserLoggedStatus(true);
                                     navigate("/")
                                 }
-                                
-                            }).catch(err=>{
-                                alert(JSON.stringify(err));
+
+                            }).catch(err => {
+                                // alert(JSON.stringify(err));
+                                document.getElementById("errLable").innerText = "Server Down"
+
                             })
 
                         }}>Login</button>

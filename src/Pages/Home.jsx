@@ -1,16 +1,21 @@
 import { useNavigate } from 'react-router-dom'
 import { Outlet, Link } from "react-router-dom";
 import '../Style/Home.css'
+import image from '../images/image.png'
+import UserContext from '../Context/UserContext';
+import { useContext } from 'react';
 
 export default function () {
     const navigate = useNavigate();
+    let {isUserLogged} = useContext(UserContext);
     return <>
         {/* <header className="header"> */}
 
-        <img style={{width: "100%",  marginTop: "60px"}} src="https://darkknight-404.github.io/app-react/image.png" alt="" srcset="" />
 
         <div style={{marginTop: "100px"}}>
-            <h1 style={{marginBottom: "300px"}}>Hello World</h1>
+
+            {isUserLogged ? <h1>Hello Welcome to the page</h1> : <h1>Please Login</h1>}
+            <h1 style={{marginBottom: "600px"}}>{isUserLogged ? <h1>Welcome!</h1>:<></>}</h1>
             
             
         </div>

@@ -30,7 +30,7 @@ body{
     list-style: none;
     overflow: hidden;
     background-color: #fff;
-    opacity: 40%;
+    /* opacity: 40%; */
 
 }
 
@@ -40,7 +40,7 @@ body{
     text-decoration: none;
     color: black;
     font-weight: 600;
-    height: fit-content;
+    /* height: fit-content; */
     background-color: transparent;
 
 }

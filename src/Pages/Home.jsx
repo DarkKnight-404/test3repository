@@ -1,7 +1,6 @@
 import { useNavigate } from 'react-router-dom'
 import { Outlet, Link } from "react-router-dom";
 import '../Style/Home.css'
-import image from '../images/image.png'
 import UserContext from '../Context/UserContext';
 import { useContext } from 'react';
 

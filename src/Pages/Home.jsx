@@ -7,9 +7,10 @@ export default function () {
     return <>
         {/* <header className="header"> */}
 
-        <img style={{width: "100%", position: "relative", top: "60px"}} src="https://darkknight-404.github.io/app-react/image.png" alt="" srcset="" />
+        <img style={{width: "100%",  marginTop: "60px"}} src="https://darkknight-404.github.io/app-react/image.png" alt="" srcset="" />
 
         <div style={{marginTop: "100px"}}>
+            
             
         </div>
 
